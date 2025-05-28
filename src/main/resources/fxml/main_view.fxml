@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Separator?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.scanner.controller.ImageController"
+            stylesheets="@../styles/style.css">
+    
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+    
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="Pilih Gambar" onAction="#handleUploadImage">
+                    <tooltip>
+                        <Tooltip text="Pilih gambar dari komputer Anda"/>
+                    </tooltip>
+                </Button>
+                <Button text="Scan" onAction="#handleScan">
+                    <tooltip>
+                        <Tooltip text="Mulai proses pemindaian dokumen"/>
+                    </tooltip>
+                </Button>
+                <Button text="Simpan" onAction="#handleSave">
+                    <tooltip>
+                        <Tooltip text="Simpan hasil pemindaian"/>
+                    </tooltip>
+                </Button>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Filter:"/>
+                <ComboBox fx:id="filterComboBox" prefWidth="150">
+                    <tooltip>
+                        <Tooltip text="Pilih filter untuk hasil pemindaian"/>
+                    </tooltip>
+                </ComboBox>
+                <Label text="Format:"/>
+                <ComboBox fx:id="exportFormatComboBox" prefWidth="100">
+                    <tooltip>
+                        <Tooltip text="Pilih format file untuk menyimpan hasil"/>
+                    </tooltip>
+                </ComboBox>
+            </HBox>
+    
+            <Separator/>
+        </VBox>
+    </top>
+    
+    <center>
+        <HBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="Gambar Asli" style="-fx-font-weight: bold;"/>
+                <ImageView fx:id="originalImageView" fitWidth="400" fitHeight="500" preserveRatio="true"/>
+            </VBox>
+            
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="Hasil Scan" style="-fx-font-weight: bold;"/>
+                <ImageView fx:id="processedImageView" fitWidth="400" fitHeight="500" preserveRatio="true"/>
+            </VBox>
+        </HBox>
+    </center>
+    
+    <bottom>
+        <VBox spacing="5">
+            <ProgressBar fx:id="progressBar" visible="false" prefWidth="Infinity"/>
+            <Label fx:id="statusLabel" text="Siap" styleClass="status-bar" prefWidth="Infinity"/>
+        </VBox> 
+    </bottom>
+    
+</BorderPane> 
