@@ -25,7 +25,7 @@ Aplikasi Scanner Dokumen berbasis JavaFX yang memungkinkan user untuk scan foto 
 
 1. Clone repositori:
 ```bash
-git clone https://github.com/username/document-scanner.git
+git clone https://github.com/riofardinan/scanner-app.git
 cd document-scanner
 ```
 
