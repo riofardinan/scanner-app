@@ -2,6 +2,8 @@
 
 Aplikasi Scanner Dokumen berbasis JavaFX yang memungkinkan user untuk scan foto dokumen.
 
+![Preview app](example-app.png)
+
 ## Fitur
 - Unggah gambar dari file lokal
 - Deteksi tepi dokumen otomatis

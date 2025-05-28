@@ -1,9 +1,5 @@
 # Debug output
 debug/
-*.png
-*.jpg
-*.jpeg
-*.pdf
 
 # Package Files
 *.jar
