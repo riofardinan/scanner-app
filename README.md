@@ -101,6 +101,11 @@ docs/                           # Dokumentasi
 - `ExportHandler.java`: Handler ekspor
   - Format PDF/PNG/JPEG
 
+## Catatan Penting
+
+ 
+> Algoritma deteksi tepi (edge detection) pada aplikasi ini disetel untuk gambar sample struk yang disediakan. Jika Anda menggunakan foto dokumen lain (misal: jenis kertas, warna latar, atau pencahayaan berbeda), hasil deteksi tepi dan pemrosesan mungkin tidak optimal. Untuk hasil terbaik pada dokumen lain, silakan sesuaikan parameter pada modul `EdgeDetector` (misal: threshold, filter, atau metode deteksi) sesuai karakteristik gambar Anda.
+
 ## Lisensi
 
 Proyek ini dilisensikan di bawah MIT License - lihat file LICENSE untuk detail. 
